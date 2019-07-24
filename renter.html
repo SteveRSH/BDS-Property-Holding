@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BDS Rental Portal</title>
+        <link rel="stylesheet" href="rental_Property.css">
+    </head>
+   
+        <section class="cities">
+            <h1 id="company_name">BDS Rental Portal</h1>
+        <table class="table_adjustment"> 
+            <tr>
+                <td id="due_date">Due date</td>
+                <td id="date_due_payment">1st day of month</td>
+            </tr> 
+            <tr>
+                <td id="rental_amount">Rental Amount</td>
+                <td id="rent_amount"> </td>
+            </tr>
+            <tr>
+                <td id="paid">Enter No:<input type="text" id="number" name="number"/>  
+                <input type="submit" value="Payment" onclick="getInputValue()"/> </td> 
+            </tr> 
+            
+            <tr>
+                <td id="balance">Balance</td>
+                <td id="payment_balance">(balance)</td>
+            </tr> 
+            
+        </table>     
+            
+            <p id="timeStamp"> </p>     
+                  
+        <div>
+  
+        <p>Please select service request:</p> 
+            
+            Interior: <input type="checkbox" id="interiorCheck">
+
+            <button onclick="check_Interior()">Check</button>
+            <button onclick="uncheck_Interior()">Uncheck</button>
+            
+            <br>
+            
+            Exterior: <input type="checkbox" id="exteriorCheck">
+
+            <button onclick="check_Exterior()">Check</button>
+            <button onclick="uncheck_Exterior()">Uncheck</button>
+            
+           <br> <br>
+            
+            <p id="interior_service_request"> </p>
+                       
+         
+        </div> 
+            
+    <form>       
+        <div id="form_interior">
+           <input type="checkbox" name="interior" value="bathroom">Bathroom<br>
+            <input type="checkbox" name="interior" value="living room">Living room<br>
+            <input type="checkbox" name="interior" value="bedroom">Bedroom<br>
+            <input type="checkbox" name="interior" value="other">Other<br><br>
+            <input type="button" onclick="myInteriorFunction()" value="Send order">
+            <br><br>
+            <input type="text" id="interiorOrder" size="50">
+            <input type="button" onclick="myInteriorSubmit()" value="Submit Order">
+        </div>
+         
+    </form>                 
+        <p id="exterior_service_request"> </p>    
+    <form>        
+            <div id = "form_exterior">
+                <input type="checkbox" name="exterior" value="landscape">Landscape<br>
+                <input type="checkbox" name="exterior" value="other">Other<br><br>
+                <input type="button" onclick="myExteriorFunction()" value="Send order">
+                <br><br>
+                <input type="text" id="exteriorOrder" size="50">
+                <input type="button" onclick="myExteriorSubmit()" value="Submit Order">
+         </div>  
+                     
+       </form> 
+            
+        <br><br>    
+    <div id = "info">
+        <label for="example"> </label><br>
+        
+        <textarea id="information"  input type = "text" onclick="removeTextCharacters()" rows="4" cols="50" maxlength="150"
+        value="Enter comments of additional service request - 150 max characters">
+        </textarea>
+        <br><br><input id="sent" type="submit"  value="Send"> 
+    </div> 
+            
+    <p id="interior_order_submitted"> </p>  
+    <button id="service_cancel" onclick="cancel()">Cancel Service Request</button>            
+                 
+        </section>
+
+    
+       
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="rentalProperty.js"></script>
+    </body>
+
+
+</html>
+
